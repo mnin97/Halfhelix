@@ -1,0 +1,105 @@
+.footer{
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 0;
+
+    .footer-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-grow: 1;
+        z-index: 1;
+        opacity: 1;
+        .main-title{
+            font-family: $font-ti;
+            font-size: 120px;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+        }
+        .desc{
+            font-size: 34px;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+        }
+        a{
+            .link-join{
+                text-transform: uppercase;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                align-items: center;
+                border-radius: 100vw;
+                padding: 10px 10px 10px 15px;
+                color: #1B45D9;
+                cursor: pointer;
+                background-color: #fff;
+                transition:background-color 0.3s cubic-bezier(.16, 1, .3, 1),color 0.3s cubic-bezier(.16, 1, .3, 1);
+                &:hover{
+                    background: #E06236;
+                    color: #fff;
+                    .icon{
+                        svg{
+                            color: #E06236;
+                        }
+                    }
+                }
+                .icon{
+                    border-radius: 100vw;
+                    background-color: currentColor;
+                    padding: 15px;
+                    position: relative;
+                    svg{
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        stroke-width: 2px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        align-self: stretch;
+        border-top: 1px solid currentColor;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 1;
+        .caption{
+            &:hover{
+                color: #E06236;
+            }
+            color: inherit;
+            text-transform: uppercase;  
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+    video{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+    }
+}

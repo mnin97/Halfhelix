@@ -1,0 +1,104 @@
+.header{
+    z-index: 10;
+    width: 100%; 
+   
+    .logo{      
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        position: fixed;
+        top: 30px;
+        z-index: 10;
+        mix-blend-mode: difference;
+        color: #fff;
+        padding: 0 30px;
+        svg{
+            width: 60px;
+        }
+    }
+    .title{
+
+        &:hover{
+            color: #E06236;
+        }
+        // position: absolute;
+        // top: 50%;
+        // left: 200px;
+        margin: 0;
+        font-size: 25px;
+        white-space: nowrap;
+        font-weight: 400;
+        line-height: .9;
+    }
+    .sub-title{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        height: 52px;
+        text-transform: uppercase;
+        color: hsl(240, 16%, 18%);
+        position: fixed;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .contact-menu{
+        
+        position: fixed;
+        top: 30px;
+        right: 0;
+        z-index: 1;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        :hover{
+            transition: 0.2s;
+            &.contact-btn{
+                background-color: #E06236;
+                color: #fff;
+            }
+        }
+        .contact-btn{
+        
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+            border-radius: 100vw;
+            border: 1px solid transparent;
+            padding: 10px 5px 10px 15px;
+            background-color: #fff;
+            color: #1B45D9;
+            box-shadow: 2px 2px 20px #0003;
+        
+            .icon{
+                width: 10px;
+                height: 10px;
+                border-radius: 100vw;
+                background-color: currentColor;
+                padding: 15px;
+                position: relative;
+
+                svg{
+                   width: 10px;
+                   height: 10px;
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   stroke-width: 2px;
+                   color: #fff;
+                   
+                }
+            }
+        }
+    }
+}

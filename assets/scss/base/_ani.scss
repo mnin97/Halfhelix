@@ -1,0 +1,8 @@
+@keyframes scroll-animation{
+    0%{
+      left: 0;
+    }
+    100%{
+      left: -400px; /* 텍스트 width와 동일 */
+    }
+  }
