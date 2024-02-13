@@ -77,7 +77,7 @@ section2tl = gsap.timeline({
         trigger: " .scroll-section2",
         start: "0% 0%",
         end: "100% 100%",
-        markers:true,
+        
         scrub:0,
         onUpdate:function(self){
             $('.scroll-section2').css({'--progress':self.progress})
