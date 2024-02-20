@@ -262,7 +262,7 @@ body.hidden {
 }
 .footer .footer-container .main-title {
   font-family: "Tiposka", serif;
-  font-size: 120px;
+  font-size: 100px;
   line-height: 0.9;
   letter-spacing: -0.05em;
 }
@@ -271,7 +271,7 @@ body.hidden {
   line-height: 0.9;
   letter-spacing: -0.05em;
 }
-.footer .footer-container a .link-join {
+.footer .footer-container .link-join {
   text-transform: uppercase;
   position: relative;
   display: -webkit-box;
@@ -288,33 +288,14 @@ body.hidden {
   border-radius: 100vw;
   padding: 10px 10px 10px 15px;
   color: #1B45D9;
+  font-weight: bold;
   cursor: pointer;
   background-color: #fff;
   -webkit-transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.footer .footer-container a .link-join:hover {
+.footer .footer-container .link-join:hover {
   background: #E06236;
-  color: #fff;
-}
-.footer .footer-container a .link-join:hover .icon svg {
-  color: #E06236;
-}
-.footer .footer-container a .link-join .icon {
-  border-radius: 100vw;
-  background-color: currentColor;
-  padding: 15px;
-  position: relative;
-}
-.footer .footer-container a .link-join .icon svg {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  stroke-width: 2px;
   color: #fff;
 }
 .footer .footer-bottom {

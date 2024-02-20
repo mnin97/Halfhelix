@@ -454,11 +454,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                video{
-                    width: 90%;
-                    border-radius: 5px;
-                    box-shadow: 4px 4px 20px #0003;
-                }
+                
+                    video{
+                        width: 90%;
+                        border-radius: 5px;
+                        box-shadow: 4px 4px 20px #0003;
+                    }
+                
+                
             }
             .bottom{
                 padding: 10px 15px;
