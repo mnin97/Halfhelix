@@ -238,41 +238,23 @@ ScrollTrigger.create({
     }
 })
 
-// gsap.to('.scroll-section3 .container .img-scroller',{
-//     ScrollTrigger:{
-//         trigger:".scroll-section3 .container .img-scroller",
-//         start:"0% 100%",
-//         end:"100% 100%",
-//         onEnter:function(){
-//             $(".scroll-section3 .main").addClass("on");
-//         },
-//         onLeaveBack:function(){
-//             $(".scroll-section3 .main").removeClass("on");
-//         }
-//     },
-// })
 
-
-// $(window).scroll(function() {
-//     // Move the variable declaration to the top
-//     let scroll = $(window).scrollTop();
-    
-
-//     if (scroll > 18000) {
-//         // Fix the selector, and add/remove class as needed
-//         $(".scroll-section3 .main").addClass("on");
-//     }else{
-//         $(".scroll-section3 .main").removeClass("on");
-//     }
-// });
-
-
-
-
-// $('.nav .list a').click(function(e){
-//     e.preventDfault();
-//     gsap.to(window, { duration: 2, scrollTo: "#someID" });
-// })
+$(".scroll-section3 .container .img-scroller img").each(function(i, e) {
+    gsap.to(e, {
+        scrollTrigger: {
+            trigger: e,
+            start: "0 100%", 
+            end: "bottom 100%", 
+            onEnter:function(){
+                e.classList.add('show');
+            },
+            onLeaveBack:function(){
+                e.classList.remove('show');
+            }
+        
+        },
+    });
+});
 
 
 
@@ -283,10 +265,11 @@ $('.section').each(function(i,el){
         end:"100% 100%",
         onEnter:function(){ //도달
             $('.nav .bar .point').css('top',`${25*i}%`)
-            // $('.nav .list .item').eq(i).addClass('on')
+            $('.nav .list .item').eq(i).addClass('on')
         },
         onEnterBack:function(){ //떠났다가 돌아옴
             $('.nav .bar .point').css('top',`${25*i}%`)
         }
     })
 })
+

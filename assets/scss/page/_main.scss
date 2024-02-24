@@ -11,7 +11,7 @@
         height: 100vh;
         width: 100%;
         z-index: 0;
-        // z-index: 0;
+        
     }
     .left-section{
         z-index: 10;
@@ -30,7 +30,6 @@
         line-height: .85;
         font-weight: 400;
         margin: 0;
-        // color:hsl(240, 16%, 18%)
       }
       .txt-infinite{
         text-transform: uppercase;
@@ -42,25 +41,23 @@
         border-top: 1px solid currentColor;
         border-bottom: 1px solid currentColor;
         overflow: hidden;
+        mix-blend-mode: difference;
         
         @keyframes scroll-animation{
             0%{
-            //   left: 0;
                 transform: translateX(0%);
             }
             100%{
                 transform: translateX(-50%);
-            //   left: -400px; /* 텍스트 width와 동일 */
             }
           }
 
         .txt-wrapper{
             display: flex;
             position: relative;
-            // width: 2800px;
             animation: scroll-animation 20s linear infinite;
             p{
-                
+                color: #fff;
             }
         }
       }
@@ -227,13 +224,9 @@
                 background-clip: text;
                 background-repeat: no-repeat;
                 background-size: 0% 100%;
-
-
                 -webkit-text-fill-color: transparent;
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color:#1b45d9;
-
-
             }
         }
         
@@ -278,8 +271,7 @@
     }
 }
 
-.scroll-section2{
-    // display: flex;
+.scroll-section2{    
     position: relative;
     height: 500vh;
 
@@ -313,58 +305,6 @@
                 font-size: 27px;
             }
         }
-
-        //         이 수식들은 스크롤 진행에 따라 이미지의 스타일 속성을 동적으로 조절하는 데 사용됩니다. 각각의 변수와 수식에 대한 자세한 설명은 다음과 같습니다:
-
-        // --min-scale: 800px;
-
-        // 이미지의 최소 크기를 나타냅니다. 이 값은 800픽셀입니다.
-        // --max-scale: 6000px;
-
-        // 이미지의 최대 크기를 나타냅니다. 이 값은 6000픽셀입니다.
-        // --max-blur: 20px;
-
-        // 이미지의 최대 흐림 효과를 나타냅니다. 이 값은 20픽셀입니다.
-        // --max-translate: 10vh;
-
-        // 이미지의 최대 수직 이동 값을 나타냅니다. 이 값은 10 뷰포트 높이입니다.
-        // --offset: 1;
-
-        // 이미지의 특정 특성을 제어하는 데 사용되는 오프셋 값입니다. 기본값은 1입니다.
-        // --scroll-progress-full: var(--progress) / var(--offset);
-
-        // 스크롤 진행의 전체 비율을 계산합니다. --progress는 스크롤의 현재 진행을 나타냅니다.
-        // --scroll-progress-doubled: calc(var(--scroll-progress-full) * 2 - 1);
-
-        // 스크롤 진행의 두 배에서 1을 빼서 -1에서 1 사이의 값을 얻습니다.
-        // --scroll-progress-mid: calc(1 - max( var(--scroll-progress-doubled), -1 * var(--scroll-progress-doubled)));
-
-        // 스크롤 진행의 중간 지점을 계산합니다. 최대 값은 1이며, 이는 스크롤이 절반을 지난 경우에 해당합니다.
-        // --depth: calc( (var(--min-scale) - var(--max-scale)) * ( var(--scroll-progress-full) ) + var(--min-scale));
-
-        // 이미지의 깊이를 계산합니다. 스크롤 진행에 따라 --min-scale과 --max-scale 사이의 값을 변화시킵니다.
-        // height: auto;
-
-        // 이미지의 높이를 자동으로 조절합니다.
-        // will-change: translate,filter,scale,opacity;
-
-        // 브라우저에게 해당 속성들이 변경될 것임을 미리 알립니다.
-        // translate: 0 0 var(--depth);
-
-        // 이미지의 3D 이동을 나타냅니다. --depth 값에 따라 변합니다.
-        // filter: blur(calc((1 - var(--scroll-progress-mid)) * var(--max-blur)));
-
-        // 이미지의 흐림 효과를 동적으로 제어합니다. 스크롤 진행에 따라 --max-blur 값이 변화합니다.
-        // opacity: var(--scroll-progress-mid);
-
-        // 이미지의 불투명도를 스크롤 진행에 따라 동적으로 조절합니다.
-        // &:nth-child(2n){--offset: .5;}
-
-        // 이미지 중 짝수 번째 자식에 대해서만 --offset 값을 0.5로 설정합니다.
-        // &:nth-child(3n){--offset: 1.5;}
-
-        // 이미지 중 3의 배수 번째 자식에 대해서만 --offset 값을 1.5로 설정합니다.
-        // 이러한 변수 및 수식은 각 이미지에 대해 스크롤에 따라 크기, 위치, 블러 등의 효과를 부여하여 다양한 시각적 효과를 만듭니다.
         .img-grid{
             display: grid;
             grid-template-columns: repeat(5,1fr);
@@ -589,9 +529,9 @@
                 flex-direction: row;
             }
             .list1{
-                &:nth-child(odd){
-                    justify-content: flex-end;
-                }
+                // &:nth-child(odd){
+                //     justify-content: flex-end;
+                // }
                display: flex;
                flex-direction: row;
                justify-content: center;
@@ -690,10 +630,10 @@
                 object-fit: cover;
                 position: relative;
                 
+                
             }
         }
         .center-title{
-            
             position: sticky;
             top: 50%;
             height: 100vh;
@@ -719,13 +659,17 @@
             overflow: visible;
             z-index: 1;
             align-self: center;
-            // perspective: 2000px;
+            perspective: 2000px;
             img{
-                width: 100%;
                 border-radius: 10px;
-                cursor: pointer;
-                opacity: 1;
-                transform-origin: top center;
+                width: 100%;
+                opacity: 0;
+                transform: rotateX(0);
+                transition: opacity 1.2s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1);
+                &.show{
+                    opacity: 1;
+                    transform: rotateX(20deg);
+                }
             }
         }
     }

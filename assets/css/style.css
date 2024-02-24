@@ -97,7 +97,6 @@ body.hidden {
 .header {
   z-index: 10;
   width: 100%;
-  position: fixed;
   min-width: 1300px !important;
 }
 .header .logo {
@@ -108,7 +107,7 @@ body.hidden {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
-  position: absolute; /* 변경 */
+  position: fixed;
   top: 30px;
   z-index: 10;
   mix-blend-mode: difference;
@@ -119,6 +118,7 @@ body.hidden {
   width: 60px;
 }
 .header .title {
+  cursor: pointer;
   margin: 0;
   font-size: 25px;
   white-space: nowrap;
@@ -126,6 +126,8 @@ body.hidden {
   line-height: 0.9;
 }
 .header .title:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #e06236;
 }
 .header .sub-title {
@@ -139,18 +141,18 @@ body.hidden {
   height: 52px;
   text-transform: uppercase;
   color: hsl(240, 16%, 18%);
-  position: absolute; /* 변경 */
+  position: fixed; /* 변경 */
   left: 50%;
   top: 30px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 1;
+  z-index: 10;
 }
 .header .contact-menu {
   position: fixed;
   top: 30px;
   right: 0;
-  z-index: 1;
+  z-index: 10;
   padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,6 +174,9 @@ body.hidden {
   background-color: #E06236;
   color: #fff;
 }
+.header .contact-menu :hover.contact-btn .icon svg {
+  color: #000;
+}
 .header .contact-menu .contact-btn {
   font-weight: 400;
   text-transform: uppercase;
@@ -191,7 +196,7 @@ body.hidden {
           align-items: center;
   border-radius: 100vw;
   border: 1px solid transparent;
-  padding: 10px 5px 10px 15px;
+  padding: 5px 5px 5px 15px;
   background-color: #fff;
   color: #1B45D9;
   -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
@@ -452,6 +457,7 @@ body.hidden {
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
   overflow: hidden;
+  mix-blend-mode: difference;
 }
 @-webkit-keyframes scroll-animation {
   0% {
@@ -480,6 +486,9 @@ body.hidden {
   position: relative;
   -webkit-animation: scroll-animation 20s linear infinite;
           animation: scroll-animation 20s linear infinite;
+}
+.main-visual .left-section .txt-infinite .txt-wrapper p {
+  color: #fff;
 }
 .main-visual .rigth-sectoin {
   position: absolute;
@@ -1057,11 +1066,6 @@ body.hidden {
           justify-content: center;
   gap: 15px;
 }
-.event .event-container .list-wrapper .list1:nth-child(odd) {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
 .event .event-container .list-wrapper .list1 .item {
   background-color: rgb(244, 244, 244);
   width: 10vw;
@@ -1211,14 +1215,24 @@ body.hidden {
   z-index: 1;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
 }
 .scroll-section3 .container .img-scroller img {
-  width: 100%;
   border-radius: 10px;
-  cursor: pointer;
+  width: 100%;
+  opacity: 0;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-section3 .container .img-scroller img.show {
   opacity: 1;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  -webkit-transform: rotateX(20deg);
+          transform: rotateX(20deg);
 }
 
 .team {
